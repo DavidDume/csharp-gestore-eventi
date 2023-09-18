@@ -15,3 +15,16 @@ Evento evento = new Evento(titolo, data, posti);
 
 Console.Write("Quanti posti desideri prenotare? ");
 evento.PrenotaPosti(int.Parse(Console.ReadLine()));
+
+evento.StampaPosti();
+
+Console.Write("Vuoi disdire dei posti (si/no): ");
+if(Console.ReadLine() == "si")
+{
+    Console.Write("Indica il numero di posti da disdire: ");
+    evento.DisdiciPosti(int.Parse(Console.ReadLine()));
+    evento.StampaPosti();
+} else
+{
+    evento.StampaPosti();
+}
