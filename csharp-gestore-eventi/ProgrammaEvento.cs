@@ -24,7 +24,7 @@ namespace csharp_gestore_eventi
 
         public List<Evento> EventiData(DateTime data)
         {
-            List<Evento> eventiInData = new List<Evento>;
+            List<Evento> eventiInData = new List<Evento>();
 
             for(int i = 0; i < eventi.Count; i++)
             {
