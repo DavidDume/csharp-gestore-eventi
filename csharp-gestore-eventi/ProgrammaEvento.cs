@@ -22,5 +22,40 @@ namespace csharp_gestore_eventi
             eventi.Add(evento);
         }
 
+        public List<Evento> EventiData(DateTime data)
+        {
+            List<Evento> eventiInData = new List<Evento>;
+
+            for(int i = 0; i < eventi.Count; i++)
+            {
+                if (eventi[i].Data.Date == data.Date)
+                {
+                    eventiInData.Add(eventi[i]);
+                }
+            }
+            return eventiInData;
+        }
+
+        public static string StampaEventi(List<Evento> eventi)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Evento evento in eventi)
+            {
+                sb.AppendLine(evento.ToString());
+            }
+            return sb.ToString();
+        }
+
+        public int NumeroEventi()
+        {
+            return eventi.Count;
+        }
+
+        public void SvuotaEventi()
+        {
+            eventi.Clear();
+        }
+
+
     }
 }
