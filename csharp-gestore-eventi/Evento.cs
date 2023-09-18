@@ -83,6 +83,8 @@ namespace csharp_gestore_eventi
             }
 
             postiPrenotati += postiDaPrenotare;
+            Console.WriteLine($"Numero di posti prenotati: {postiPrenotati}");
+            Console.WriteLine($"Numero di posti disponibili: {capienzaMax - postiPrenotati}");
         }
 
         public void DisdiciPosti(int postiDaDisdire)
